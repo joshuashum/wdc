@@ -31,6 +31,7 @@ nav li {
 }
 
 nav img {
+    position: relative;  top: 20px; 
     width: 10%;
 }
 
@@ -67,6 +68,7 @@ p {
     grid-template-columns: 40% 40%;
     justify-content: space-between;
     row-gap: 2rem;
+    align-items: baseline;
     background-color: yellow;
 }
 
@@ -80,5 +82,5 @@ p {
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
-    row-gap: 1rem;
+    row-gap: 2rem;
 }
