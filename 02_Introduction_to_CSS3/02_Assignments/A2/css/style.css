@@ -8,6 +8,10 @@ header {
     padding: 1em 1em;
 }
 
+header a {
+    background-color: #FFFFFF;
+}
+
 nav {
     background-color: #FFFFFF;
     color: #1E3765;
