@@ -70,24 +70,35 @@ nav li {
 }
 
 nav a {
-    color: #1E3765;
+    color: #FFF;
+    background-color: #1E3765;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    border: 1px #1E3765 solid;
 }
 
 nav a:hover {
-    color: #337AB7;
+    color: #FFF;
+    background-color: #007894;
+    border: 1px #007894 solid;
 }
 
 nav a:active {
-    color: #007894;
+    color: #1E3765;
+    background-color: #FFF;
+    border: 1px #1E3765 dotted;
 }
 
 nav img {
     position: relative;
     top: 20px;
     width: 10%;
-    border: 1px black;
-    padding: 1em;
+    background-color: #1E3765;
+    text-decoration: none;
+    padding: 0.5em 1em;
     border-radius: 5px;
+    border: 1px #1E3765 solid;
 }
 
 main {
@@ -98,7 +109,7 @@ main {
 .btn {
     background-color: #1E3765;
     color: #FFF;
-    font-size: 1.5em;
+    font-size: 1em;
     padding: 0.5em 1em;
     border: 1px #1E3765 solid;
     border-radius: 5px;
@@ -112,12 +123,16 @@ main {
     border: 1px #007894 dotted;
     font-size: 1.5em;
     transition-duration: 0.5s;
-    text-decoration: underline;
+    text-decoration: none;
+
 }
 
 .btn:active {
     background-color: #337AB7;
     color: #FFF;
+    text-decoration: underline;
+    font-size: 1em;
+    transition-duration: 0.5s;
 }
 
 #return {
