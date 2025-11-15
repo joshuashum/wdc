@@ -186,3 +186,8 @@ p {
     border: 5px #EFAF23 dotted;
     border-radius: 20px;
 }
+
+.flex img:nth-child(odd) {
+    border: 5px #AB1368 dotted;
+    border-radius: 20px;
+}
