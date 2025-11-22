@@ -1,0 +1,3 @@
+This "Cheat Sheet" covers the major essentials of the JavaScript language. Some of it we have covered, and some we will cover in the next two weeks. And then there is a chunk we will never get to.
+
+https://www.shecodes.io/cheatsheets/javascript
