@@ -1,8 +1,16 @@
+const originalImage = document.getElementById("image");
+const originalText = originalImage.innerHTML;
+const originalBackground = originalImage.style.backgroundImage;
+
 function upDate(previewPic) {
-    document.getElementById("image").style.backgroundImage = "url('" + previewPic.src + "')";
-    /* This would also work */
+    console.log("Hovered image:", previewPic.alt, previewPic.src);
+    originalImage.style.backgroundImage = `url(${previewPic.src})`;
+    originalImage.innerHTML = previewPic.alt;
+
+    /* These would also work */
+    // document.getElementById("image").style.backgroundImage = "url('" + previewPic.src + "')";
     // document.getElementById("image").style.backgroundImage = `url(${previewPic.src})`;
-    document.getElementById("image").innerHTML = previewPic.alt;
+    // document.getElementById("image").innerHTML = previewPic.alt;
 
     /* In this function you should 
        1) change the url for the background image of the div with the id = "image" 
@@ -15,8 +23,12 @@ function upDate(previewPic) {
 }
 
 function unDo() {
-    document.getElementById("image").style.backgroundImage = "url('')";
-    document.getElementById("image").innerHTML = "Hover over an image below to display here.";
+    originalImage.innerHTML = originalText;
+    originalImage.style.backgroundImage = originalBackground;
+
+    /* These would also work */
+    // document.getElementById("image").style.backgroundImage = "url('')";
+    // document.getElementById("image").innerHTML = "Hover over an image below to display here.";
 
     /* In this function you should 
        1) Update the url for the background image of the div with the id = "image" 
@@ -27,3 +39,9 @@ function unDo() {
        */
 
 }
+
+const previews = document.querySelectorAll(".preview");
+previews.forEach(preview => {
+    preview.addEventListener("mouseover", () => upDate(preview));
+    preview.addEventListener("mouseout", unDo);
+});
