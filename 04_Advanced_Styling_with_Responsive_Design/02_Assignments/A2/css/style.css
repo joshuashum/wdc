@@ -1,0 +1,124 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #dedede;
+    padding: 5px;
+    margin: 15px;
+    font-size: 25px;
+    font-family: Lato, Calibri, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.95em;
+}
+
+h2 {
+    text-align: center;
+}
+
+li {
+    margin-top: 20px;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.label {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+figure {
+    border: 5px solid #1E3765;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0;
+}
+
+figcaption {
+    text-align: center;
+    font-family: Lato, Calibri, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1em 2em;
+    background-color: #1E3765;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #007894;
+}
+
+
+
+/* Tablet */
+@media (min-width: 772px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    figure {
+        border-radius: 50%;
+    }
+
+    .grid figure:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Large */
+@media (min-width: 992px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    figure {
+        border-radius: 0;
+    }
+
+    .grid figure:nth-child(3n) {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+        /* remove smooth scroll */
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    figure {
+        background-color: #212427;
+        color: #EFAF23;
+        border-color: black;
+    }
+}
