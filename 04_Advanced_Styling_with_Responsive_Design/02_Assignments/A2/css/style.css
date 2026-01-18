@@ -111,7 +111,6 @@ footer {
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
-        /* remove smooth scroll */
     }
 }
 
