@@ -149,8 +149,8 @@ footer {
     display: inline-block;
     margin: 1em 0em;
     padding: 0.5em 1em;
-    background-color: #FFFFFF;
-    color: #C70025;
+    background-color: #C70025;
+    color: #FFFFFF;
     text-decoration: none;
     font-weight: bold;
     font-size: 1em;
@@ -159,8 +159,8 @@ footer {
 }
 
 .btn:hover {
-    background-color: #C70025;
-    color: #FFFFFF;
+    background-color: #FFFFFF;
+    color: #C70025;
     transition: background-color 0.3s ease;
 }
 
