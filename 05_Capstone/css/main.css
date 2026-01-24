@@ -1,0 +1,259 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #F9F9F9;
+    color: #333333;
+}
+
+header {
+    background: #222222;
+    color: #FFFFFF;
+    padding: 1rem;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    padding: 2em;
+}
+
+nav a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #EFAF23;
+    transition-duration: 0.5s;
+}
+
+nav a:focus {
+    outline: 3px solid #EFAF23;
+}
+
+main {
+    flex: 1;
+    padding: 1.5rem;
+}
+
+section {
+    margin-bottom: 3rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: #C70025;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.carousel img {
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.carousel-btn {
+    background: #222222;
+    color: #FFFFFF;
+    border: none;
+    padding: 0.75rem;
+    cursor: pointer;
+}
+
+.carousel-btn:hover {
+    background: #444;
+}
+
+#image {
+    width: 100%;
+    max-width: 768px;
+    aspect-ratio: 16 / 9;
+    margin: 0 auto;
+    background-color: #A9A9A9;
+    color: #FFFFFF;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    font-size: 1em;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+#image span {
+    background-color: rgba(9, 6, 6, 0.8);
+    padding: 0.3em 0.8em;
+}
+
+.preview {
+    width: 10%;
+    filter: blur(4px);
+    transition: filter 0.3s ease;
+}
+
+.preview:hover,
+.preview:focus {
+    filter: blur(0px);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    justify-items: center;
+    align-items: center;
+    row-gap: 1rem;
+    padding: 2em 0em;
+}
+
+.grid img {
+    width: 50%;
+}
+
+footer {
+    background: #222222;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    margin: 1em 0em;
+    padding: 0.5em 1em;
+    background-color: #FFFFFF;
+    color: #C70025;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #C70025;
+    color: #FFFFFF;
+    transition: background-color 0.3s ease;
+}
+
+
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+}
+
+/* Mobile fallback (parallax disabled for performance) */
+@media (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 900px) {
+    main {
+        padding: 2.5rem;
+    }
+
+    .carousel {
+        gap: 2rem;
+    }
+}
+
+@media (min-width: 901px) {
+    main {
+        max-width: 1000px;
+        margin: auto;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none;
+        transition: none;
+    }
+}
+
+/* =========================
+   PARALLAX SECTIONS
+========================= */
+
+.parallax {
+    min-height: 60vh;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.parallax-banner-home {
+    background-image: url("../images/japan4.jpg");
+}
+
+.parallax-banner-discover {
+    background-image: url("../images/japan6.jpg");
+}
+
+.parallax-banner-gallery {
+    background-image: url("../images/japan5.jpg");
+}
+
+.parallax-1 {
+    background-image: url("../images/japan7.jpg");
+}
+
+.parallax-2 {
+    background-image: url("../images/japan10.jpg");
+}
+
+.parallax-content {
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 2rem 3rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.parallax-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #C70025;
+}
+
+.parallax-content p {
+    font-size: 1.2rem;
+}
