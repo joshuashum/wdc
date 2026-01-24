@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     font-family: system-ui, sans-serif;
     line-height: 1.6;
@@ -12,6 +16,7 @@ body {
     flex-direction: column;
     background: #F9F9F9;
     color: #333333;
+    overflow-x: hidden;
 }
 
 header {
@@ -70,8 +75,8 @@ h2 {
 
 .parallax {
     min-height: 60vh;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
+    width: 100%;
+    margin-left: 0;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -262,4 +267,3 @@ footer {
         transition: none;
     }
 }
-
